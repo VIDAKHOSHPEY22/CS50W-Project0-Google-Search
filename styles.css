@@ -1,147 +1,153 @@
+/* تنظیمات عمومی صفحه */
 body {
-  margin: 0px;
-  height: 100vh;
-  font-family: Arial, sans-serif;
-}
-
-input {
-  font-size: 16px;
-  width: 300px;
-  padding: 13px 0;
-  /* Parent selector = & */
-}
-input:focus {
-  outline: none;
-}
-input[type=text] {
-  /* Give input text a lighter color */
-  color: #464646;
-  margin: 0 0 0 5px;
-}
-input[type=submit] {
-  font-size: 14px;
-  width: 185px;
-  /* Remove border */
-  border-width: 0px;
-  border-radius: 15px;
-  margin: 20px;
-}
-input[type=submit]:hover {
-  /* Add box-shadow when hovering button (border adds space) */
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
-}
-input.blue-button {
-  background-color: dodgerblue;
-  color: white;
-  font-size: smaller;
-  max-width: 200px;
-  border-radius: 0px;
-  border: 1px solid #156bbd;
-  float: right;
-  padding: 10px 2px;
   margin: 0;
-}
-
-.header, .header-links, .header-advanced-logo, .header-advanced {
+  height: 100vh; /* جلوگیری از اسکرول */
+  font-family: Arial, sans-serif;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center; /* صفحه کاملاً فیکس شود */
+  overflow: hidden; /* حذف اسکرول */
 }
-.header a, .header-links a, .header-advanced-logo a, .header-advanced a {
-  color: black;
-  padding: 10px;
-  text-decoration: none;
+
+/* استایل هدر و لینک‌های بالای صفحه */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding: 15px 20px;
+  position: absolute;
+  top: 10px;
 }
-.header-advanced {
-  background-color: #f1f1f1;
-  height: 50px;
-}
-.header-advanced-logo {
-  padding: 10px;
-}
-.header-advanced-logo img {
-  height: 30px;
-}
+
+/* لینک‌های بالای صفحه در سمت راست */
 .header-links {
-  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
-.appbar {
-  margin: 30px 10px;
-}
-.appbar label {
-  color: #d93025;
-  font-size: 20px;
-  margin: 50px 30px;
+.header-links a {
+  color: #5f6368;
+  font-size: 14px;
+  text-decoration: none;
+  margin-left: 10px;
 }
 
-.separator-line {
-  border-bottom: solid 1px #d6d6d6;
+.header-links a:hover {
+  text-decoration: underline;
 }
 
+/* استایل فیلد جستجو */
 .search-container {
   display: flex;
   flex-direction: column;
-  /* Align the search container in the center of the viewport */
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  height: 90%;
+  flex-grow: 1; /* تنظیم محتوا برای فیکس شدن در صفحه */
 }
-.search-container .search-field {
+
+/* فرم جستجو */
+.search-field {
   display: flex;
-  flex-direction: row;
-  border-radius: 25px;
-  border: 1px solid #afafaf;
   align-items: center;
-  margin: 10px;
-  padding-left: 15px;
+  border: 2px solid #dfe1e5;
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 600px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
-.search-container .search-field input {
+
+/* فیلد ورودی */
+.search-field input {
+  flex: 1;
   border: none;
-  border-radius: 25px;
-}
-.search-container .logo-subtext {
-  color: #4285f4;
-  position: relative;
-  left: 110px;
-  top: -18px;
+  outline: none;
+  font-size: 18px;
+  padding: 12px;
 }
 
-.advanced-search-container {
-  margin: 50px 40px;
+/* اضافه کردن placeholder */
+input[type="text"] {
+  font-size: 18px;
+  padding: 12px;
 }
-.advanced-search-container label {
-  display: inline-block;
-  width: 16%;
-  font-size: 20px;
+
+input[type="text"]::placeholder {
+  color: #9e9e9e;
+  font-size: 16px;
 }
-.advanced-search-container .whitespace {
-  display: inline-block;
-  width: 50%;
+
+/* افکت هنگام فوکوس */
+input[type="text"]:focus {
+  border-color: #4285f4;
+  box-shadow: 0 1px 8px rgba(32, 33, 36, 0.28);
 }
-.advanced-search-container .form-group {
+
+/* دکمه‌های جستجو */
+.search-buttons {
   display: flex;
-  align-items: center;
-  margin-top: 10px;
-  padding: 10px 0;
-}
-.advanced-search-container .form-group label {
-  width: 16%;
-  font-size: 14px;
-}
-.advanced-search-container .form-group input[type=text] {
-  width: 49%;
-  padding: 2px 0;
-}
-.advanced-search-container .form-group .clarification {
-  font-size: 11px;
-  width: 30%;
-  margin-left: 1%;
-}
-.advanced-search-container .form-group .clarification .monospace {
-  font-family: monospace;
-}
-.advanced-search-container .form-group .right-align {
-  width: 50%;
+  justify-content: flex-start;
+  margin-top: 20px;
+  gap: 15px;
 }
 
-/*# sourceMappingURL=styles.css.map */
+input[type="submit"] {
+  font-size: 16px;
+  padding: 12px 25px;
+  background-color: #f1f3f4;
+  border: 2px solid #dfe1e5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 96px;
+  margin-top: 15px;
+}
+
+input[type="submit"]:hover {
+  background-color: #e0e0e0;
+}
+
+/* دکمه "I'm Feeling Lucky" */
+input.blue-button {
+  background-color: #4285f4;
+  color: white;
+  font-size: 16px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: 2px solid #156bbd;
+  cursor: pointer;
+}
+
+/* تنظیمات ریسپانسیو برای موبایل */
+@media (max-width: 768px) {
+  .search-field {
+      width: 90%;
+      padding: 8px 15px;
+  }
+
+  input[type="text"] {
+      font-size: 16px;
+      padding: 10px;
+  }
+
+  .search-buttons {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+  }
+
+  .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .header-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+  }
+}

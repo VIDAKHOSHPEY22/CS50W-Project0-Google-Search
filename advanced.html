@@ -1,10 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Set viewport with -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link to CSS -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css">
     <title>Advanced Search</title>
 </head>
 <body>
@@ -21,50 +20,57 @@
         </div>
     </div>
     <!-- HEADER END -->
+    
     <!-- APPBAR START -->
     <div class="appbar">
-        <label>Advanced Search</label>
+        <h2>Advanced Search</h2>
     </div>
     <div class="separator-line"></div>
     <!-- APPBAR END -->
+
     <!-- SEARCH CONTAINER START -->
     <div class="advanced-search-container">
         <form action="https://www.google.com/search" method="get">
-            <label>Find pages with...</label>
+            <span>Find pages with...</span>
             <div class="whitespace"></div>
-            <label>To do this in the search box.</label>
+            <span>To do this in the search box.</span>
+
             <div class="form-group">
-                <label>All these words:</label>
-                <input type="text" name="as_q">
+                <label for="search-query">All these words:</label>
+                <input type="text" id="search-query" name="as_q">
                 <div class="clarification">
                     Type the important words: <span class="monospace">tri-colour rat terrier</span>
                 </div>
             </div>
+
             <div class="form-group">
-                <label>This exact word or phrase:</label>
-                <input type="text" name="as_epq">
+                <label for="exact-phrase">This exact word or phrase:</label>
+                <input type="text" id="exact-phrase" name="as_epq">
                 <div class="clarification">
                     Put exact words in quotes: <span class="monospace">"rat terrier"</span>
-</div>
+                </div>
             </div>
+
             <div class="form-group">
-                <label>Any of these words: </label>
-                <input type="text" name="as_oq">
+                <label for="any-words">Any of these words:</label>
+                <input type="text" id="any-words" name="as_oq">
                 <div class="clarification">
                     Type OR between all the words you want: <span class="monospace">miniature OR standard</span>
-</div>
+                </div>
             </div>
+
             <div class="form-group">
-                <label>None of these words:</label>
-                <input type="text" name="as_eq">
+                <label for="none-words">None of these words:</label>
+                <input type="text" id="none-words" name="as_eq">
                 <div class="clarification">
                     Put a minus sign just before words that you don't want: <span class="monospace">-rodent, -"Jack Russell"</span>
-</div>
+                </div>
             </div>
+
             <div class="form-group">
-                <label></label>
+                <label for="submit-btn"></label>
                 <div class="right-align">
-                    <input type="submit" class="blue-button" value="Google Advanced Search">
+                    <input type="submit" id="submit-btn" class="blue-button" value="Google Advanced Search">
                 </div>
             </div>
         </form>

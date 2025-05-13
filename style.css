@@ -1,0 +1,117 @@
+/* تنظیمات عمومی صفحه */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+/* استایل هدر */
+.header-advanced {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.header-advanced-logo img {
+    height: 28px;
+    margin-top: 5px;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+}
+
+.header-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #1a0dab;
+}
+
+.header-links a:hover {
+    text-decoration: underline;
+}
+
+/* استایل عنوان "Advanced Search" */
+.appbar h2 {
+    padding: 20px;
+    font-size: 22px;
+    color: #d93025;
+    margin-left: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/* خط جداکننده */
+.separator-line {
+    height: 1px;
+    background-color: #ddd;
+}
+
+.advanced-search-container {
+    margin: 50px 40px;
+}
+
+.advanced-search-container label {
+    display: inline-block;
+    width: 16%;
+    font-size: 20px;
+}
+
+.advanced-search-container .whitespace  {
+    display: inline-block;
+    width: 58%;
+}
+
+.advanced-search-container .form-group {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+.advanced-search-container .form-group label {
+    width: 16%;
+    font-size: 14px;
+}
+
+.advanced-search-container .form-group input[type="text"] {
+    width: 49%;
+    padding: 6px; /* افزایش padding برای هماهنگی بیشتر با گوگل */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.advanced-search-container .form-group .clarification {
+    font-size: 11px;
+    width: 30%;
+    margin-left: 1%;
+}
+
+.advanced-search-container .form-group .clarification .monospace {
+    font-family: monospace;
+}
+
+/* دکمه‌ی ارسال جستجوی پیشرفته به سبک گوگل */
+.advanced-search-container .form-group .right-align {
+    width: 50%;
+}
+
+.blue-button {
+    background-color: #4285f4; /* رنگ آبی گوگل */
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.blue-button:hover {
+    background-color: #357ae8;
+}
